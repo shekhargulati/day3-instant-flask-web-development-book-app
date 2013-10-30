@@ -1,0 +1,5 @@
+venv
+build
+*.pyc
+*.pyo
+*.db

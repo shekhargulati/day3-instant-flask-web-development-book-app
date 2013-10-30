@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% from 'appointment/common.html' import detail %}
+
+{% block title %}Appointments{% endblock title %}
+
+{% block main %}
+<div class="row">
+  {% for appt in appts %}
+    <div class="span12">
+      {{ detail(appt, link_title=true, show_edit=false, show_description=false) }}
+    </div>
+  {% else %}
+    <h3 class="span12">No appointments.</h3>
+  {% endfor %}
+</div>
+{% endblock main %}

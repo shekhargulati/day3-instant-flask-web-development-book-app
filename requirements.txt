@@ -1,0 +1,8 @@
+# Packages at pypi.python.org for use in this project.
+# Install with `pip install -r requirements.txt`.
+Flask
+Flask-Login
+Flask-Script
+Flask-SQLAlchemy
+SQLAlchemy
+WTForms

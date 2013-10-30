@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock title %}
+
+{% block main %}
+<div class="row">
+  <div class="login well offset2 span8">
+    <form method="post" class="form-horizontal">
+      <legend>Login</legend>
+      {% if error %}<p class="alert alert-error">{{ error }}</p>{% endif %}
+      <div class="control-group{% if form.username.errors %} error{% endif%}">
+        {{ form.username.label(class="control-label") }}
+        <div class="controls">
+          {{ form.username }}
+          {% for error in form.username.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+        </div>
+      </div>
+      <div class="control-group{% if form.password.errors %} error{% endif%}">
+        {{ form.password.label(class="control-label") }}
+        <div class="controls">
+          {{ form.password }}
+          {% for error in form.password.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Log In</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock main %}
